@@ -1,9 +1,38 @@
 <div class="container">
-  <h1>Teste</h1>
+  <h1>Produtos</h1>
 
-  <% @products.each do |product| %>
-    <p>
-      <%= product.name %>
-    </p>
+  <% if @products.empty? %>
+    <p>Nenhum produto encontrado</p>
+  <% else %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            Produto
+          </th>
+          <th>
+            Descrição
+          </th>
+          <th>
+            Quantidade em estoque
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td>
+              <%= link_to product.name, product %>
+            </td>
+            <td>
+              <%= product.description %>
+            </td>
+            <td>
+              <%= product.stock_quantity %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   <% end %>
 </div>

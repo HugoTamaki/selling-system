@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @product.name %></h1>
+
+  <p>
+    <%= @product.description %>
+  </p>
+
+  <p>Quantidade: <%= @product.stock_quantity %></p>
+
+  <%= link_to 'Voltar', products_path %>
+</div>
