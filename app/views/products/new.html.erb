@@ -1,21 +1,5 @@
 <div class="container">
   <h1>Adicione um novo produto</h1>
 
-  <%= form_for(@product) do |f| %>
-    <label>
-      Nome: 
-      <%= f.text_field :name %>
-    </label>
-
-    <label>
-      Descrição
-      <%= f.text_field :description %>
-    </label>
-
-    <label>
-      Quantidade em estoque
-      <%= f.text_field :stock_quantity %>
-    </label>
-  <% end %>
-    
+  <%= render 'form' %>
 </div>

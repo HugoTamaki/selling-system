@@ -1,0 +1,9 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.input :name, label: 'Nome' %>
+
+  <%= f.input :description, label: 'Descrição' %>
+
+  <%= f.input :stock_quantity, label: 'Quantidade em estoque' %>
+
+  <%= f.button :submit, input_html: { class: 'button btn-primary' } %>
+<% end %>
